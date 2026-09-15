@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&family=DM+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f7f7;
+  --text-primary: #0a0a0a;
+  --text-secondary: #6b6b6b;
+  --border-color: #e0e0e0;
+  --accent-black: #000000;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+.input {
+  @apply border border-[#444] p-3 rounded-none outline-none focus:border-neutral-800 focus:ring-1 focus:ring-black transition bg-black;
+}
+
+.btn-primary {
+  @apply bg-black text-white px-5 py-2.5 font-medium tracking-wide border border-neutral-800 hover:bg-black hover:text-white transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-black text-white px-5 py-2.5 font-medium tracking-wide border border-neutral-800 hover:bg-[#1a1a1a] transition-all duration-300;
+}
+
+.btn-success {
+  @apply bg-black text-white px-5 py-2.5 font-medium tracking-wide flex items-center gap-2 border border-neutral-800 hover:bg-gray-800 transition-all duration-300;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slideUp {
+  animation: slideUp 0.35s ease-out forwards;
+}
